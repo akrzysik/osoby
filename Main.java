@@ -1,18 +1,38 @@
+import java.util.ArrayList;
+
 public class Main {
 
 	public static void main(String[] args) {
 		Osoba jas = new Uczen("Jan", "Kowalski", "5b", 4);
+    Osoba grzes = new Uczen("Grzegorz", "Braun", "5b", 4);
+
 		Osoba adam = new Nauczyciel("Adam", "Nowak", "matematyka", 2000);
 		Osoba ktos = new Osoba("Gal", "Anonim");
 		Osoba janusz = new Dyrektor("Janusz", "Woźniak", "historia", 5000, "SP 145 w Krakowie");
-		jas.opis();
-		System.out.println();
-		adam.opis();
-		System.out.println();
-		ktos.opis();
-		System.out.println();
-    janusz.opis();
-		System.out.println();
+		
+    ArrayList<Osoba> uczniowie = new ArrayList<Osoba>();
+    uczniowie.add(jas);
+    uczniowie.add(grzes);
+
+    ArrayList<Osoba> nauczyciele = new ArrayList<Osoba>();
+    nauczyciele.add(adam);
+    nauczyciele.add(janusz);
+
+    System.out.println("Nauczyciele");
+    System.out.println();
+    for(Osoba o : nauczyciele) {
+			o.opis();
+      System.out.println();
+		}
+
+    System.out.println("Uczniowie");
+    System.out.println();
+    for(Osoba o : uczniowie) {
+			o.opis();
+      System.out.println();
+		}
+
+
 	}
 }
 
