@@ -4,12 +4,14 @@ public class Main {
 		Osoba jas = new Uczen("Jan", "Kowalski", "5b", 4);
 		Osoba adam = new Nauczyciel("Adam", "Nowak", "matematyka", 2000);
 		Osoba ktos = new Osoba("Gal", "Anonim");
-		
+		Osoba janusz = new Dyrektor("Janusz", "Woźniak", "historia", 5000, "SP 145 w Krakowie");
 		jas.opis();
 		System.out.println();
 		adam.opis();
 		System.out.println();
 		ktos.opis();
+		System.out.println();
+    janusz.opis();
 		System.out.println();
 	}
 }
